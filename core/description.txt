@@ -1,0 +1,1 @@
+Core contains basic .js files. This includes everything that isn't an approximation method for now. Additional organization may happen in the future.
