@@ -1,0 +1,1 @@
+This directory contains all approximation methods, as well as 'approximations.js', which loads the rest of the methods.
