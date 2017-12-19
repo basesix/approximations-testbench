@@ -1,0 +1,10 @@
+.listEntry{
+	background: aliceblue;
+	padding: 3px;
+	font-size: large;
+}
+
+.listEntry:nth-child(even){
+	background: paleturquoise;
+}
+
