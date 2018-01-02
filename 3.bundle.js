@@ -1,9 +1,22 @@
 webpackJsonp([3],{
 
-/***/ 23:
-/***/ (function(module, exports) {
+/***/ 171:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = [{"x":1.354416509},{"x":-0.6711964623},{"x":4.341596466},{"x":7.330822189},{"x":15.627706},{"x":23.21447769},{"x":35.2759397},{"x":49.6235336},{"x":62.99853644},{"x":80.80896756},{"x":98.24800863}]
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+function Approximation(){};
+
+Approximation.prototype.evaluate = function(x){
+	x = x[0];
+	return (x*x);
+};
+
+Approximation.prototype.train = function(dataset){
+	//noop
+};
+	
+/* harmony default export */ __webpack_exports__["default"] = (Approximation);
 
 /***/ })
 

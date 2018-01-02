@@ -1,1 +1,6 @@
-{"datasets":[{"name":"simple squares","path":"simple-squares.csv"},{"name":"noisy squares","path":"noisy simple squares.csv"}]}
+{"datasets":[
+	{"name":"simple squares","path":"simple-squares.csv", "id":"simplesquares", "inputs":["x"], "outputs":["y"]},
+	{"name":"noisy squares","path":"noisy simple squares.csv", "id":"noisysquares", "inputs":["x"], "outputs":["y"]},
+	{"name":"noisy sine","path":"noisy sine.csv", "id":"noisysine", "inputs":["x"], "outputs":["y"]},
+	{"name":"full noisy sine","path":"full noisy sine.csv", "id":"fullnoisysine", "inputs":["x"], "outputs":["y"]}
+]}

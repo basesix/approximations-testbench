@@ -1,0 +1,4 @@
+{"approximations":[
+	{"name":"x squared","path":"xSquared.js","id":"xsquared"},
+	{"name":"least squares","path":"leastSquares.js","id":"leastsquares"}
+]}

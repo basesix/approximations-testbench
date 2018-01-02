@@ -1,0 +1,12 @@
+Approximations test Bench plan of action:
+
+Description: The goal of the approximations test bench is to have a way of testing multiple approximation
+methods on different data sets and visualizing the results with a small set of simple plots.
+
+Initial goals: Set up a HTML dashboard for visuaizing an approximation on a simple set of data. Approximations
+will be generated with a single input and output dimension, in the form y = f(x). Set up an approximation, a chart,
+and a data set.
+
+Next goals:
+-Add a 2-D approximation option w. 2-D plot
+-

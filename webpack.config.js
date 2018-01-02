@@ -12,7 +12,8 @@ module.exports = {
 		resolve: {
 		alias: {
 			vue: 'vue/dist/vue.js',
-			d3: 'd3/build/d3.min.js'
+			d3: 'd3/build/d3.min.js',
+			mathjs: 'mathjs/index.js'
 		}
 	},
 	module : {
@@ -22,7 +23,7 @@ module.exports = {
 				loader: 'csv-loader',
 				options: {
 					dynamicTyping: true,
-					header: true,
+					header: true, //Turning this on will 
 					skipEmptyLines: true
 				}
 			},

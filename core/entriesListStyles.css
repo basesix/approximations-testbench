@@ -5,6 +5,10 @@
 }
 
 .listEntry:nth-child(even){
-	background: paleturquoise;
+	background: #f8fcff;
+}
+
+.listEntry.selected{
+	background: #8ac9ff;
 }
 
