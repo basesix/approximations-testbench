@@ -1,4 +1,5 @@
 {"approximations":[
 	{"name":"x squared","path":"xSquared.js","id":"xsquared"},
-	{"name":"least squares","path":"leastSquares.js","id":"leastsquares"}
+	{"name":"Least Squares","path":"leastSquares.js","id":"leastsquares"},
+	{"name":"RBF Interpolation","path":"rbfInterpolation.js","id":"rbfint"}
 ]}

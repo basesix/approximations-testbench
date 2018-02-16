@@ -2,5 +2,7 @@
 	{"name":"simple squares","path":"simple-squares.csv", "id":"simplesquares", "inputs":["x"], "outputs":["y"]},
 	{"name":"noisy squares","path":"noisy simple squares.csv", "id":"noisysquares", "inputs":["x"], "outputs":["y"]},
 	{"name":"noisy sine","path":"noisy sine.csv", "id":"noisysine", "inputs":["x"], "outputs":["y"]},
-	{"name":"full noisy sine","path":"full noisy sine.csv", "id":"fullnoisysine", "inputs":["x"], "outputs":["y"]}
+	{"name":"full noisy sine","path":"full noisy sine.csv", "id":"fullnoisysine", "inputs":["x"], "outputs":["y"]},
+	{"name":"full sine","path":"full sine.csv", "id":"fullsine", "inputs":["x"], "outputs":["y"]},
+	{"name":"coarse sine","path":"coarse sine.csv", "id":"coarsesine", "inputs":["x"], "outputs":["y"]}
 ]}

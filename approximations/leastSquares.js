@@ -1,4 +1,5 @@
-import {matrix, multiply, inv, transpose} from 'mathjs';
+//import {matrix, multiply, inv, transpose} from 'mathjs';
+import m from '../myMath/luSolver.js';
 
 function Approximation(){
 	this.options = {
@@ -18,17 +19,17 @@ Approximation.prototype.evaluate = function(x){
 	
 	//Representation of terms
 	//beta * x-transpose
-	var xVector = transpose(matrix([
+	var xVector = m.transpose([
 		this.termsVector.map(function(term){
 			return term.reduce(function(val, power, index){
 				return val*Math.pow(x[index], power);
 			}, 1);
 		})
-	]));
+	]);
 	
 	//For now, this should always be a single value since there's only one
 	//output.
-	return multiply(transpose(this.betaVector), xVector).toArray()[0][0];
+	return m.mult(m.transpose(this.betaVector), xVector)[0][0];
 };
 
 Approximation.prototype.train = function(inputs, outputs){
@@ -36,13 +37,13 @@ Approximation.prototype.train = function(inputs, outputs){
 	
 	var nInputs = inputs[0].length
 	
-	const zeros = function(n){
+	/*const zeros = function(n){
 		var a = [];
 		for(var i = 0; i < n; i++){
 			a.push(0);
 		}
 		return a;
-	};
+	};*/
 	
 	//Build terms matrix
 	//Terms matrix represents orders of terms. For a 1-d input array, this would look something like: [[0], [1], [2], [3]]
@@ -86,10 +87,10 @@ Approximation.prototype.train = function(inputs, outputs){
 	}.bind(this);
 	
 	//Get all terms with order < maxOrder, including cross terms.
-	var i = 1, newTerm = zeros(nInputs);
+	var i = 1, newTerm = m.zeros(nInputs);
 	this.termsVector.push(newTerm);
 	for(i; i <= this.options.maxOrder; i++){
-		newTerm = zeros(nInputs);
+		newTerm = m.zeros(nInputs);
 		newTerm[newTerm.length-1] = i;
 		do{
 			this.termsVector.push(newTerm);
@@ -98,7 +99,7 @@ Approximation.prototype.train = function(inputs, outputs){
 	}	
 	
 	//Build x-matrix
-	var xMatrix = matrix(inputs.map(function(input){
+	var xMatrix = inputs.map(function(input){
 		//Get an x-vector for each input
 		return this.termsVector.map(function(term){
 			//Get an element in the x-vector for each term
@@ -106,13 +107,15 @@ Approximation.prototype.train = function(inputs, outputs){
 				return val*Math.pow(input[index], power);
 			}, 1);
 		}.bind(this));
-	}.bind(this)));
-	var yMatrix = matrix(outputs);
+	}.bind(this));
+	var yMatrix = outputs;
 	
-	this.betaVector = multiply(
+	this.betaVector = m.luSolve(xMatrix, yMatrix);
+	
+	/*multiply(
 		inv(multiply(transpose(xMatrix),xMatrix)),
 		multiply(transpose(xMatrix), yMatrix)
-	);
+	);*/
 };
 	
 export default Approximation;
