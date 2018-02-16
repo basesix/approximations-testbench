@@ -3,10 +3,29 @@ Approximations test Bench plan of action:
 Description: The goal of the approximations test bench is to have a way of testing multiple approximation
 methods on different data sets and visualizing the results with a small set of simple plots.
 
-Initial goals: Set up a HTML dashboard for visuaizing an approximation on a simple set of data. Approximations
+0.1 release:
+Initial goals (Finished!): Set up a HTML dashboard for visuaizing an approximation on a simple set of data. Approximations
 will be generated with a single input and output dimension, in the form y = f(x). Set up an approximation, a chart,
 and a data set.
 
+Approximations set up:
+-Least-squares polynomial regression
+-RBF interpolation (Gaussian basis function)
+
+Added some 1-D data sets.
+
 Next goals:
--Add a 2-D approximation option w. 2-D plot
--
+Charing goals:
+-2-D contour plot
+-Scatter/line /w uncertainty?
+Error plots?
+
+Approximation goals:
+-Add a decision tree approximation
+-Add an ensemble version of the decision tree
+-Add kriging
+-Add a radial basis network
+
+Design goals:
+-Add a settings panel for the approximations
+-Move approximation computation to a web worker. Have a status for the approximations /w indicators on the approx lines.
